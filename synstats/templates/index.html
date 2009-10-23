@@ -1,0 +1,23 @@
+
+<html>
+  <body>
+    <form action="/" method="post">
+        <div>
+            {% if chisq %}
+                chisq: {{ chisq }} p-value: {{ p }}
+                <br/>
+            {% endif %}
+            <textarea name="content" rows="10" cols="60">
+                {% if data %} 
+{{ data }}
+                {% else %}
+#observed[, expected]
+50,45
+40,45
+                {% endif %}
+</textarea>
+      </div>
+      <div><input type="submit" value="chisquare"></div>
+    </form>
+  </body>
+</html>
